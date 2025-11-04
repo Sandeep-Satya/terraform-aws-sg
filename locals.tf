@@ -1,10 +1,4 @@
-variable "project_name" {
-    type = string
-}
 
-variable "environment" {
-    type = string
-}
 
 locals { 
      common_tags = {
@@ -12,5 +6,5 @@ locals {
             Environment = var.environment
             terraform   = "true"
         }
-        comman_name_suffix = "${var.project_name}-${var.environment}"
+        common_name_suffix = "${var.project_name}-${var.environment}"
 }
